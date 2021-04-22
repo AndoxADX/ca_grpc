@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>clean_architecture_grpc.Domain</RootNamespace>
+    <AssemblyName>clean_architecture_grpc.Domain</AssemblyName>
+  </PropertyGroup>
+
+</Project>
