@@ -17,6 +17,6 @@ namespace clean_architecture_grpc.Application.TodoLists.Queries.GetTodos
 
         public string Colour { get; set; }
 
-        public IList<TodoItemDto> Items { get; set; }
+        public IList<TodoItemDto> Items { get; private set; } // To minimize missing error.
     }
 }

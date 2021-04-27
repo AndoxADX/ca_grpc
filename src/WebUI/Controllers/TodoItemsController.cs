@@ -15,9 +15,10 @@ namespace clean_architecture_grpc.WebUI.Controllers
     public class TodoItemsController : ApiControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<PaginatedList<TodoItemDto>>> GetTodoItemsWithPagination([FromQuery] GetTodoItemsWithPaginationQuery query)
+        public async Task<IActionResult> GetTodoItemsWithPagination([FromQuery] GetTodoItemsWithPaginationQuery query)
         {
-            return await Mediator.Send(query);
+            //Change to use IActionResult instead of PaginatedList<TodoItemDto>. Not as strong typed
+            return Ok(await Mediator.Send(query));
         }
 
         [HttpPost]
